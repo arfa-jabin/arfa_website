@@ -3,84 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arfa Jabin</title>
+    <title>Arfa Jabin | AI Researcher & Developer</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.1/ScrollTrigger.min.js"></script>
+    <script src="js/script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- Navbar -->
-<nav>
-    <div class="logo">Arfa Jabin</div>
-    <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <img src="images/profile.jpg" alt="Arfa Jabin" class="profile-img">
+            <h1>Arfa Jabin</h1>
+            <p>AI Researcher & Developer | Computational Pathology Enthusiast</p>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+    </section>
 
-<!-- Hero Section -->
-<section id="hero">
-    <div class="hero-content">
-        <img src="images/profile.jpg" alt="Profile" class="profile-img">
-        <h1>Arfa Jabin</h1>
-        <p>AI Researcher & Developer | Computational Pathology Enthusiast</p>
-        <a href="#contact" class="btn">Get in Touch</a>
-    </div>
-</section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hello! I’m Arfa Jabin, PhD candidate and AI researcher with expertise in computational pathology, deep learning, whole-slide image analysis, and gene expression prediction. I have experience in Image Processing, Gene Set Enrichment Analysis (GSEA), Ingenuity Pathway Analysis, and database management. Passionate about turning research into real-world impact.</p>
+        <h3>Education & Achievements</h3>
+        <ul>
+            <li>PhD in Computational Pathology (Expected Submission: 2026)</li>
+            <li>BSc & MSc in [Your Field], [University Name]</li>
+            <li>First positions in scientific presentations, literary, cultural competitions, and sports at the university level</li>
+        </ul>
+    </section>
 
-<!-- About Section -->
-<section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I’m Arfa Jabin, passionate about AI, deep learning, and computational pathology. I specialize in whole-slide image analysis, gene expression prediction, and creating impactful research projects.</p>
-
-    <!-- Skills -->
-    <div class="skills">
-        <h3>Skills</h3>
-        <div class="skill">
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skill-bar">
             <p>Python</p>
-            <div class="skill-bar"><div class="skill-fill" data-percent="90%"></div></div>
+            <div class="bar"><div class="progress" style="width:90%"></div></div>
         </div>
-        <div class="skill">
+        <div class="skill-bar">
             <p>Deep Learning</p>
-            <div class="skill-bar"><div class="skill-fill" data-percent="85%"></div></div>
+            <div class="bar"><div class="progress" style="width:85%"></div></div>
         </div>
-        <div class="skill">
+        <div class="skill-bar">
             <p>Image Processing</p>
-            <div class="skill-bar"><div class="skill-fill" data-percent="80%"></div></div>
+            <div class="bar"><div class="progress" style="width:80%"></div></div>
         </div>
-    </div>
-</section>
+        <div class="skill-bar">
+            <p>GSEA / IPA</p>
+            <div class="bar"><div class="progress" style="width:75%"></div></div>
+        </div>
+        <div class="skill-bar">
+            <p>Machine Learning</p>
+            <div class="bar"><div class="progress" style="width:80%"></div></div>
+        </div>
+        <div class="skill-bar">
+            <p>Database Management</p>
+            <div class="bar"><div class="progress" style="width:70%"></div></div>
+        </div>
+    </section>
 
-<!-- Projects Section -->
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="project-container">
-        <div class="project">
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
             <img src="images/project1.jpg" alt="Project 1">
-            <h3>Project Title 1</h3>
-            <p>Short description of Project 1.</p>
+            <h3>WSI Analysis for Predicting Gene Expression</h3>
+            <p>Developed a deep learning pipeline integrating whole-slide images with transcriptomic profiles to predict gene expression patterns and pathway activities.</p>
         </div>
-        <div class="project">
+        <div class="project-card">
             <img src="images/project2.jpg" alt="Project 2">
-            <h3>Project Title 2</h3>
-            <p>Short description of Project 2.</p>
+            <h3>Pathology Image Segmentation</h3>
+            <p>Created a preprocessing and segmentation workflow for whole-slide images enabling accurate tissue analysis.</p>
         </div>
-        <!-- Add more projects -->
-    </div>
-</section>
+        <!-- Add more projects here -->
+    </section>
 
-<!-- Contact Section -->
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:yourmail@example.com">yourmail@example.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
-    <p>GitHub: <a href="https://github.com/yourprofile" target="_blank">github.com/yourprofile</a></p>
-</section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:yourmail@example.com">yourmail@example.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/arfa-jabin" target="_blank">linkedin.com/in/arfa-jabin</a></p>
+        <p>GitHub: <a href="https://github.com/arfa-jabin" target="_blank">github.com/arfa-jabin</a></p>
+    </section>
 
-<script src="js/script.js"></script>
+    <footer>
+        <p>&copy; 2026 Arfa Jabin. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
