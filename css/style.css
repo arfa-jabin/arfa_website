@@ -1,56 +1,200 @@
-/* Reset */
-* {margin:0; padding:0; box-sizing:border-box;}
-body {font-family: 'Poppins', sans-serif; line-height:1.6; color:#333;}
-a {text-decoration:none; color:inherit;}
-
-/* Navbar */
-nav {
-    position: fixed; width:100%; background:rgba(255,255,255,0.95);
-    display:flex; justify-content:space-between; padding:20px 50px;
-    box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:1000;
+/* ========== Global Styles ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
-nav .logo {font-weight:700; font-size:1.5rem;}
-nav .nav-links {list-style:none; display:flex; gap:30px;}
-nav .nav-links li a:hover {color:#0077ff;}
 
-/* Hero */
-#hero {
-    height:100vh; display:flex; flex-direction:column;
-    align-items:center; justify-content:center;
-    background:linear-gradient(135deg,#0077ff,#00d4ff);
-    color:white; text-align:center; padding:0 20px;
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
 }
-.profile-img {width:150px; height:150px; border-radius:50%; margin-bottom:20px;}
-#hero h1 {font-size:3rem; margin-bottom:20px;}
-#hero p {font-size:1.3rem; margin-bottom:30px;}
-.btn {padding:12px 30px; background:white; color:#0077ff; border-radius:25px; font-weight:600; transition:0.3s;}
-.btn:hover {background:#0077ff; color:white;}
 
-/* Sections */
-section {padding:100px 50px; text-align:center; opacity:0;}
-section h2 {font-size:2.5rem; margin-bottom:40px;}
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-/* Skills */
-.skills {max-width:600px; margin:40px auto 0 auto; text-align:left;}
-.skill {margin-bottom:20px;}
-.skill p {margin-bottom:5px; font-weight:600;}
-.skill-bar {width:100%; background:#eee; border-radius:20px; overflow:hidden;}
-.skill-fill {width:0; height:15px; background:#0077ff; border-radius:20px;}
+/* ========== Navbar ========== */
+header {
+    width: 100%;
+    background-color: #1f1f1f;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
 
-/* Projects */
-.project-container {display:flex; flex-wrap:wrap; justify-content:center; gap:30px;}
-.project {width:300px; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s;}
-.project img {width:100%; height:200px; object-fit:cover; transition:transform 0.3s, filter 0.3s;}
-.project img:hover {filter:brightness(1.1);}
-.project h3 {margin:20px 0 10px;}
-.project p {padding:0 20px 20px;}
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
 
-/* Contact */
-#contact a {color:#0077ff;}
-#contact a:hover {text-decoration:underline;}
+header nav ul li a {
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
 
-/* Responsive */
-@media (max-width:768px){
-    nav {flex-direction:column; gap:10px;}
-    .project-container {flex-direction:column; gap:20px;}
+header nav ul li a:hover {
+    color: #4caf50;
+}
+
+/* ========== Hero Section ========== */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(to right, #1f1f1f, #4caf50);
+    color: white;
+    padding-top: 60px;
+}
+
+.hero .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    padding: 10px 25px;
+    background-color: #fff;
+    color: #4caf50;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+/* ========== Section Styles ========== */
+section {
+    padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #1f1f1f;
+}
+
+/* ========== About Section ========== */
+.about ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.about p {
+    margin-bottom: 20px;
+}
+
+/* ========== Skills Section ========== */
+.skills .skill-bar {
+    margin-bottom: 20px;
+}
+
+.skills .skill-bar p {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.skills .bar {
+    background-color: #ddd;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skills .progress {
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px 0 0 10px;
+}
+
+/* ========== Projects Section ========== */
+.projects .project-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projects .project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.projects .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ========== Contact Section ========== */
+.contact p {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.contact a {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* ========== Footer ========== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: white;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
 }
