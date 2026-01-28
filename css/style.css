@@ -1,0 +1,56 @@
+/* Reset */
+* {margin:0; padding:0; box-sizing:border-box;}
+body {font-family: 'Poppins', sans-serif; line-height:1.6; color:#333;}
+a {text-decoration:none; color:inherit;}
+
+/* Navbar */
+nav {
+    position: fixed; width:100%; background:rgba(255,255,255,0.95);
+    display:flex; justify-content:space-between; padding:20px 50px;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:1000;
+}
+nav .logo {font-weight:700; font-size:1.5rem;}
+nav .nav-links {list-style:none; display:flex; gap:30px;}
+nav .nav-links li a:hover {color:#0077ff;}
+
+/* Hero */
+#hero {
+    height:100vh; display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    background:linear-gradient(135deg,#0077ff,#00d4ff);
+    color:white; text-align:center; padding:0 20px;
+}
+.profile-img {width:150px; height:150px; border-radius:50%; margin-bottom:20px;}
+#hero h1 {font-size:3rem; margin-bottom:20px;}
+#hero p {font-size:1.3rem; margin-bottom:30px;}
+.btn {padding:12px 30px; background:white; color:#0077ff; border-radius:25px; font-weight:600; transition:0.3s;}
+.btn:hover {background:#0077ff; color:white;}
+
+/* Sections */
+section {padding:100px 50px; text-align:center; opacity:0;}
+section h2 {font-size:2.5rem; margin-bottom:40px;}
+
+/* Skills */
+.skills {max-width:600px; margin:40px auto 0 auto; text-align:left;}
+.skill {margin-bottom:20px;}
+.skill p {margin-bottom:5px; font-weight:600;}
+.skill-bar {width:100%; background:#eee; border-radius:20px; overflow:hidden;}
+.skill-fill {width:0; height:15px; background:#0077ff; border-radius:20px;}
+
+/* Projects */
+.project-container {display:flex; flex-wrap:wrap; justify-content:center; gap:30px;}
+.project {width:300px; border-radius:10px; overflow:hidden; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s;}
+.project img {width:100%; height:200px; object-fit:cover; transition:transform 0.3s, filter 0.3s;}
+.project img:hover {filter:brightness(1.1);}
+.project h3 {margin:20px 0 10px;}
+.project p {padding:0 20px 20px;}
+
+/* Contact */
+#contact a {color:#0077ff;}
+#contact a:hover {text-decoration:underline;}
+
+/* Responsive */
+@media (max-width:768px){
+    nav {flex-direction:column; gap:10px;}
+    .project-container {flex-direction:column; gap:20px;}
+}
